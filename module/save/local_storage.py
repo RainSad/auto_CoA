@@ -19,7 +19,9 @@ class LocalStorage:
         except FileNotFoundError:
             try:
                 sys_default = os.path.join(PathUtils.get_base_dir(), "sys_default.json")
-                with open(sys_default, "r") as json_file:
+                print("--------------")
+                print(sys_default)
+                with open(sys_default, "r", encoding='utf-8') as json_file:
                     self.__dict = json.load(json_file)
             except FileNotFoundError:
                 self.__dict = {}
@@ -72,7 +74,7 @@ class LocalStorageMgr(Singleton):
     def __init__(self):
         self.__storage_dict = {}
 
-    def getLocalStorage(self, name="user_default") -> LocalStorage:
+    def getLocalStorage(self, name='user_default') -> LocalStorage:
         """
         获取本地存储对象
         """
