@@ -1,6 +1,9 @@
+
+
 import ctypes
 import os
 import sys
+
 
 os.chdir(os.path.dirname(sys.executable) if getattr(sys, 'frozen', False)
          else os.path.dirname(os.path.abspath(__file__)))
@@ -15,7 +18,7 @@ QApplication.setHighDpiScaleFactorRoundingPolicy(Qt.HighDpiScaleFactorRoundingPo
 QApplication.setAttribute(Qt.AA_EnableHighDpiScaling)
 QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps)
 
-sys.path.append("..\\auto_CoA")
+sys.path.append('..\\auto_CoA')
 
 
 def is_admin():

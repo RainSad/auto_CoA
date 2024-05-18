@@ -26,3 +26,6 @@ class PathUtils:
         """
         basedir = os.path.abspath(PathUtils.get_base_dir())
         return os.path.normpath(os.path.join(basedir, relative_path))
+
+# a =PathUtils()
+# print(str(a.get_base_dir))
